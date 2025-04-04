@@ -1,0 +1,69 @@
+@HostAddress = http://localhost:5219
+
+# Dictionary - form
+GET {{HostAddress}}/demo/fromDict?demoQuery.key1=value1,value2
+
+###
+
+# Dictionary - form (explode)
+GET {{HostAddress}}/demo/fromDict?key1=value1&key2=value2
+
+###
+
+# Dictionary - spaceDelimited
+GET {{HostAddress}}/demo/fromDict?demoQuery=value1%20value2
+
+###
+
+# Dictionary - pipeDelimited
+GET {{HostAddress}}/demo/fromDict?demoQuery=value1|value2
+
+###
+
+# Dictionary - deepObject
+GET {{HostAddress}}/demo/fromDict?demoQuery[key1]=value1&demoQuery[key2]=value2
+
+###
+
+# Nested Dictionary - form
+GET {{HostAddress}}/demo/fromNestedDict?demoQuery.key1.nestedKey1=value1
+
+###
+
+# Nested Dictionary - form (explode)
+GET {{HostAddress}}/demo/fromNestedDict?key1.nestedKey1=value1&key2.nestedKey2=value2
+
+###
+
+# Nested Dictionary - deepObject (nested)
+GET {{HostAddress}}/demo/fromNestedDict?demoQuery[key1][nestedKey1]=value1&demoQuery[key2][nestedKey2]=value2
+
+###
+
+# Object - form
+GET {{HostAddress}}/demo/fromObj?demoQuery=value1,value2
+
+###
+
+# Object - form (explode)
+GET {{HostAddress}}/demo/fromObj?key1=value1&key2=value2
+
+###
+
+# Object - spaceDelimited
+GET {{HostAddress}}/demo/fromObj?demoQuery=value1%20value2
+
+###
+
+# Object - pipeDelimited
+GET {{HostAddress}}/demo/fromObj?demoQuery=value1|value2
+
+###
+
+# Object - deepObject
+GET {{HostAddress}}/demo/fromObj?demoQuery[key1]=value1&demoQuery[key2]=value2
+
+###
+
+# Nested Dictionary - form (explode)
+GET {{HostAddress}}/demo/fromNestedObj?key1=value1&key2.key1=value1&key2.key2=value2
